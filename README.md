@@ -1,4 +1,4 @@
-1. You must first have nodes in your system.
+1. You must first have node in your system.
 2. Then, go to the server-api folder and run (npm start) to start the JSON server.
 3. Then go to the medical-management folder and run (npm start) to start React in your browser.
 
