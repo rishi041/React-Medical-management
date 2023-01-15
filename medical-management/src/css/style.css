@@ -1,0 +1,44 @@
+.album {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* for text start */
+.headingContainer {
+  max-width: 300px;
+  max-height: 50px;
+  overflow: hidden;
+}
+
+.headingContainer .headingInside {
+  width: auto;
+  min-height: 50px;
+}
+/* for text end */
+
+/* for Image start */
+.imgContainer {
+  max-width: 300px;
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.imgContainer img {
+  width: 300px;
+  min-height: 250px;
+}
+/* for Image end */
+
+/* for text start */
+.textContainer {
+  max-width: auto;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.textContainer .textInside {
+  width: auto;
+  min-height: 100px;
+}
+/* for text end */
