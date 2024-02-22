@@ -27,13 +27,20 @@ const Homecart = () => {
   // get Data end
 
   // delete data start
-  function Delete(id) {
+  const Delete = async (id) => {
     if (
       window.confirm("please confirm if you want delete the record") == true
     ) {
-      api.delete(`/medicine/${id}`).then(loadUsers()).then(navigate("/home"));
+      try {
+        await api.delete(`/medicine/${id}`);
+        loadUsers();
+        navigate("/home");
+      } catch (error) {
+        // Handle errors here
+        console.log(error);
+      }
     }
-  }
+  };
   // delete data end
 
   const handleShowAdd = () => {
