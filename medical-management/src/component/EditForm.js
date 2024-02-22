@@ -28,8 +28,14 @@ function EditForm(props) {
 
   // edit data start
 
-  function update() {
-    api.put(`/medicine/${id}`, data).then(navigate("/home"));
+  async function update() {
+    try {
+      await api.put(`/medicine/${id}`, data);
+      navigate("/home");
+    } catch (error) {
+      // Handle errors here
+      console.log(error);
+    }
   }
   // edit data end
 
