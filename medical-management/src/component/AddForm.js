@@ -18,9 +18,15 @@ function AddForm() {
   };
 
   // add data start
-  function submit() {
-    api.post("/medicine", data).then(navigate("/home"));
-  }
+  const submit = async () => {
+    try {
+      await api.post("/medicine", data);
+      navigate("/home");
+    } catch (error) {
+      // Handle errors here
+      console.log(error);
+    }
+  };
   // add data end
 
   return (
