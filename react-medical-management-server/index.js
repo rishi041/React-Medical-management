@@ -1,6 +1,10 @@
 const express = require("express");
-require("dotenv").config();
+const cors = require("cors");
 const app = express();
+require("dotenv").config();
+
+
+app.use(cors());
 
 const Data = {
   "login": [
