@@ -1,5 +1,5 @@
 const express = require("express");
-const mySecret = process.env["PORT"];
+require("dotenv").config();
 const app = express();
 // const port = 3000;
 
@@ -11,6 +11,6 @@ app.get("/twitter", (req, res) => {
   res.send("<h1>Rushikesh Ganorkar Twiter</h1>");
 });
 
-app.listen(mySecret, () => {
-  console.log(`Example app listening on port ${mySecret}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Example app listening on port ${process.env.PORT}`);
 });
